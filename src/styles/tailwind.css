@@ -1,97 +1,96 @@
 /* tailwind.css */
 
-/* 배경색 및 기본 스타일 */
 body {
-    background-color: #f7fafc;
-    font-family: 'Inter', sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .popup-container {
-    padding: 20px;
-    max-width: 400px;
-    margin: auto;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* 제목 스타일 */
-  h1 {
-    font-size: 1.5rem;
-    color: #333;
-    margin-bottom: 1rem;
-  }
-  
-  /* 리스트 항목 스타일 */
-  .cheat-sheet-item {
-    background-color: #f9f9f9;
-    padding: 10px;
-    margin-bottom: 12px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  .cheat-sheet-item:hover {
-    background-color: #f0f0f0;
-  }
-  
-  h3 {
-    font-size: 1.2rem;
-    color: #333;
-    font-weight: 600;
-  }
-  
-  p {
-    font-size: 1rem;
-    color: #666;
-    margin-top: 0.5rem;
-  }
-  
-  /* 폼 스타일 */
-  input[type="text"], textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    margin-bottom: 12px;
-    font-size: 1rem;
-    box-sizing: border-box;
-  }
-  
-  input[type="text"]:focus, textarea:focus {
-    border-color: #3182ce;
-    outline: none;
-  }
-  
-  /* 버튼 스타일 */
-  button {
-    background-color: #3182ce;
-    color: #fff;
-    padding: 10px 15px;
-    border-radius: 8px;
-    border: none;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  button:hover {
-    background-color: #2b6cb0;
-  }
-  
-  button:active {
-    background-color: #2b6cb0;
-    transform: translateY(1px);
-  }
-  
-  /* 삭제 버튼 스타일 */
-  button.delete {
-    background-color: #e53e3e;
-  }
-  
-  button.delete:hover {
-    background-color: #c53030;
-  }
-  
+  background-color: #f7fafc;
+  font-family: 'Inter', sans-serif;
+  width: 550px; /* 원하는 너비 설정 */
+}
+
+.popup-container {
+  padding: 20px;
+  max-width: 400px;
+  margin: auto;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* 제목 스타일 */
+h1 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+/* 리스트 항목 스타일 */
+.cheat-sheet-item {
+  background-color: #f9f9f9;
+  padding: 10px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.cheat-sheet-item:hover {
+  background-color: #f0f0f0;
+}
+
+h3 {
+  font-size: 1.2rem;
+  color: #333;
+  font-weight: 600;
+}
+
+p {
+  font-size: 1rem;
+  color: #666;
+  margin-top: 0.5rem;
+}
+
+/* 폼 스타일 */
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+input[type="text"]:focus,
+textarea:focus {
+  border-color: #3182ce;
+  outline: none;
+}
+
+/* 버튼 스타일 */
+button {
+  background-color: #3182ce;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #2b6cb0;
+}
+
+button:active {
+  background-color: #2b6cb0;
+  transform: translateY(1px);
+}
+
+/* 삭제 버튼 스타일 */
+button.delete {
+  background-color: #e53e3e;
+}
+
+button.delete:hover {
+  background-color: #c53030;
+}

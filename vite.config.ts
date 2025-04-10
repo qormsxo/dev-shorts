@@ -3,6 +3,7 @@ import react from '@vitejs/plugin-react'
 import { resolve } from 'path'
 
 export default defineConfig({
+  base: './', // 상대 경로로 설정
   plugins: [react()],
   css: {
     postcss: './postcss.config.js', // postcss 설정 파일 경로 명시

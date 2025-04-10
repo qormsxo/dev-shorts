@@ -1,6 +1,6 @@
 // src/pages/popup.tsx
 import React, { useState } from 'react';
-import { ShortCutList, ShortCuts } from '../components/shortCutList';
+import { ShortCutList, ShortCuts } from '../components/ShortCutList';
 import { AddEntryForm } from '../components/AddEntryForm';
 import { getCheatSheets, saveCheatSheet, deleteCheatSheet } from '../utils/storage';
 
