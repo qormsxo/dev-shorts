@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ShortCuts } from './shortCutList';
+import { ShortCuts } from './ShortCutList';
 
 // 함수 타입 정의
 interface AddEntryFormProps {
