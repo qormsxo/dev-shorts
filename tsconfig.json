@@ -1,0 +1,22 @@
+{
+    "compilerOptions": {
+      "target": "esnext",               
+      "module": "esnext",
+      "moduleResolution": "node",
+      "strict": true, 
+      "esModuleInterop": true,
+      "skipLibCheck": true,
+      "jsx": "react-jsx",
+      "allowJs": true,
+      "resolveJsonModule": true,
+      "isolatedModules": true 
+    },
+    "include": [
+      "src/**/*",
+      "index.html"
+    ],
+    "exclude": [
+      "node_modules"
+    ]
+  }
+  

@@ -1,0 +1,12 @@
+{
+    "manifest_version": 3,
+    "name": "Dev CheatSheet",
+    "version": "1.0",
+    "description": "나만의 개발자 치트시트 확장 프로그램",
+    "action": {
+      "default_popup": "index.html",
+      "default_icon": "icon.png"
+    },
+    "permissions": ["storage"],
+    "host_permissions": ["<all_urls>"]
+  }
