@@ -1,4 +1,4 @@
-import { ShortCuts } from "../components/shortCutList";
+import { ShortCuts } from "../components/ShortCutList";
 
 // src/utils/storage.ts
 const CHEATSHEET_STORAGE_KEY = 'dev_cheat_sheets';
