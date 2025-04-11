@@ -6,6 +6,7 @@ import { LoginForm } from '../components/LoginForm';  // 로그인 폼 컴포넌
 import { getCheatSheets, saveCheatSheet, deleteCheatSheet } from '../utils/storage';
 import { signin, signUp } from '../utils/api/authUtils';
 import { SignUpForm } from '../components/SignUpForm';
+import { handleError } from '../utils/errorUtils';
 
 export const Popup = () => {
     const [cheatSheets, setCheatSheets] = useState(getCheatSheets());
@@ -28,7 +29,7 @@ export const Popup = () => {
             const result = await signin(email, password); 
             setIsLoggedIn(true); 
         } catch (error) {
-            alert(error instanceof Error ? error.message : 'signup fail')
+            alert(handleError(error, 'login fail'));
         }
     };
 
@@ -36,14 +37,12 @@ export const Popup = () => {
         try {
             const response = await signUp(email, password);
 
-            const data = await response.json();
-
             if (response.ok) {
                 alert('signUp succes!');
                 setIsSignUp(true)
             }
         } catch (error) {
-            alert(error instanceof Error ? error.message : 'signup fail')
+            alert(handleError(error, 'signup fail'));
         }
     };
 

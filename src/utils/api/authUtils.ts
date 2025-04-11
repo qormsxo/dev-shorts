@@ -1,3 +1,4 @@
+import { getErrorMessage } from '../errorUtils';
 import { apiFetch } from './apiUtils';
 
 export const signin = async (email: string, password: string): Promise<any> => {
@@ -11,7 +12,8 @@ export const signin = async (email: string, password: string): Promise<any> => {
 
         return result; 
     } catch (error) {
-        throw new Error(error instanceof Error ? error.message : 'login fail');
+        const errorMessage = getErrorMessage(error);
+        throw new Error(errorMessage);
     }
 };
 
@@ -25,9 +27,8 @@ export const signUp = async (email: string, password: string) => {
 
         return result; 
     } catch (error) {
-        console.log(error instanceof Error ? error.message : 'signup fail');
-        
-        throw new Error(error instanceof Error ? error.message : 'signup fail');
+        const errorMessage = getErrorMessage(error);
+        throw new Error(errorMessage);
     }
 };
 

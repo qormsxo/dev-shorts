@@ -10,11 +10,13 @@ export const apiFetch = async (endpoint: string, options: RequestInit = {}) => {
                 ...(options.headers || {}),
             },
         });
-    
+
         const result = await response.json();
 
         if (!response.ok) {
-            throw new Error(result.error.message+ 'API 요청 실패');
+            console.log( result.error );
+            
+            throw new Error( result?.error || 'API 요청 실패');
         }
 
         return result;
