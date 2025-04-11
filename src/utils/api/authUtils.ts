@@ -1,13 +1,12 @@
-// src/utils/loginUtils.ts
-import { apiFetch } from './apiUtils';  // apiUtils에서 공통 함수 불러오기
+import { apiFetch } from './apiUtils';
 
-export const loginUser = async (email: string, password: string): Promise<any> => {
+export const signin = async (email: string, password: string): Promise<any> => {
     try {
         const result = await apiFetch('/auth/signin', {
             method: 'POST',
             body: JSON.stringify({ email, password }),
         });
-        
+
         localStorage.setItem('authToken', result.session.access_token);
 
         return result; 

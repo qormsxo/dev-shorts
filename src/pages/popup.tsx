@@ -4,7 +4,7 @@ import { ShortCutList, ShortCuts } from '../components/ShortCutList';
 import { AddEntryForm } from '../components/AddEntryForm';
 import { LoginForm } from '../components/LoginForm';  // 로그인 폼 컴포넌트
 import { getCheatSheets, saveCheatSheet, deleteCheatSheet } from '../utils/storage';
-import { loginUser, signUp } from '../utils/authUtils';
+import { signin, signUp } from '../utils/api/authUtils';
 import { SignUpForm } from '../components/SignUpForm';
 
 export const Popup = () => {
@@ -25,7 +25,7 @@ export const Popup = () => {
 
     const handleLogin = async (email: string, password: string) => {
         try {
-            const result = await loginUser(email, password); 
+            const result = await signin(email, password); 
             setIsLoggedIn(true); 
         } catch (error) {
             alert(error instanceof Error ? error.message : 'signup fail')

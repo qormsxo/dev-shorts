@@ -1,6 +1,5 @@
 // src/components/SignUpForm.tsx
 import React, { useState } from 'react';
-import { loginUser } from '../utils/authUtils';
 
 interface SignUpFormProps {
     onSignUp: (email: string, password: string) => void;
