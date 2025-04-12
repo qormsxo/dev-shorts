@@ -1,14 +1,16 @@
 import { getErrorMessage } from '../errorUtils';
-import { apiFetch } from './apiUtils';
+import { ApiClient } from './apiUtils';
+
+const apiClient = new ApiClient();
 
 export const signin = async (email: string, password: string): Promise<any> => {
     try {
-        const result = await apiFetch('/auth/signin', {
+        const result = await apiClient.fetchRequest('/auth/signin', {
             method: 'POST',
             body: JSON.stringify({ email, password }),
         });
 
-        localStorage.setItem('authToken', result.session.access_token);
+        localStorage.setItem('access_token', result.session.access_token);
 
         return result; 
     } catch (error) {
@@ -20,7 +22,7 @@ export const signin = async (email: string, password: string): Promise<any> => {
 
 export const signUp = async (email: string, password: string) => {
     try {
-        const result = await apiFetch('/auth/signup', {
+        const result = await apiClient.fetchRequest('/auth/signup', {
             method: 'POST',
             body: JSON.stringify({ email, password }),
         });
