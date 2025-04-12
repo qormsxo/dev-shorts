@@ -1,18 +1,18 @@
 import React from 'react';
 
-// CheatSheet 타입 정의
-export interface ShortCuts {
-    shortCuts: string;
-    details: string;
+export interface Shortcut {
+    shortcut: string;
+    detail: string;
+    categoryId: number;
 }
 
-interface ShortCutListListProps {
-    cheatSheets: ShortCuts[];
+interface ShortcutListListProps {
+    shortcuts: Shortcut[];
     onDelete: (index: number) => void;  // 삭제 기능을 위한 onDelete 함수 추가
 }
 
 
-export const ShortCutList: React.FC<ShortCutListListProps> = ({ cheatSheets, onDelete }) => {
+export const ShortcutList: React.FC<ShortcutListListProps> = ({ shortcuts, onDelete }) => {
 
     const handleCopy = (content: string) => {
         navigator.clipboard.writeText(content).then(() => {
@@ -24,17 +24,17 @@ export const ShortCutList: React.FC<ShortCutListListProps> = ({ cheatSheets, onD
 
     return (
         <div className="cheat-sheet-list">
-            {cheatSheets.length === 0 ? (
+            {shortcuts.length === 0 ? (
                 <p>No cheat sheets available.</p>
             ) : (
-                cheatSheets.map((sheet, index) => (
+                shortcuts.map((shortcut, index) => (
                     <div 
                         key={index} 
                         className="cheat-sheet-item"
-                        onClick={() => handleCopy(sheet.shortCuts)}  // 클릭 시 복사
+                        onClick={() => handleCopy(shortcut.shortcut)}  // 클릭 시 복사
                     >
-                        <h3>{sheet.shortCuts}</h3>
-                        <p>{sheet.details}</p>
+                        <h3>{shortcut.shortcut}</h3>
+                        <p>{shortcut.detail}</p>
                         <button
                             onClick={(e) => {
                                 e.stopPropagation();  // 버튼 클릭 시 div의 onClick 이벤트가 호출되지 않도록 함
